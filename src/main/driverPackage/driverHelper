@@ -1,0 +1,26 @@
+package reusableComponents;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.time.Duration;
+import java.util.Properties;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class webdriverHelper {
+	public static WebDriver driver;
+	public WebDriver initializeDriver(){
+	
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\Sheerin Mukherjee\\Desktop\\Selenium Drivers\\chromedriver\\chromedriver.exe" );
+		driver= new ChromeDriver();
+       
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+        driver.manage().deleteAllCookies();
+	    return driver;
+	}
+	}
