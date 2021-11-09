@@ -1,0 +1,559 @@
+MILESTONE 4 SBA:
+
+FEATURE FILES:
+Login.feature
+Feature: Tide Login
+Scenario: To search and verify the presence of a particular product-Tide Free and Gentle powder
+Given User launch chrome browser
+When  User opens URL "https://tide.com/en-us"
+And   Hovers on Shop Products
+And   Choose powder option from drop-down
+Then  Verify if title "Tide Free and Gentle Powder" is displayed or not.
+
+TestTitle.feature
+Feature: Test Title
+Scenario: To search and verify the presence of a particular title-Antibacterial
+Given User launch chrome browser
+When  User opens URL "https://tide.com/en-us"
+And   Types “Anti-Bacterial” in search bar
+Then  Verify if title "Anti-Bacterial" is displayed or not.
+
+
+
+
+
+
+
+
+
+
+POM.xml File:
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>projectCucumber</groupId>
+  <artifactId>projectCucumber_v001</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+
+  <name>projectCucumber_v001</name>
+  <!-- FIXME change it to the project's website -->
+  <url>http://www.example.com</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.7</maven.compiler.source>
+    <maven.compiler.target>1.7</maven.compiler.target>
+  </properties>
+
+  <dependencies>
+  <!-- https://mvnrepository.com/artifact/org.testng/testng -->
+<dependency>
+    <groupId>org.testng</groupId>
+    <artifactId>testng</artifactId>
+    <version>6.14.3</version>
+    <scope>test</scope>
+</dependency>
+    <!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
+<dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi-ooxml</artifactId>
+    <version>4.1.2</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+<dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi</artifactId>
+    <version>4.1.2</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-log4j12 -->
+<dependency>
+    <groupId>org.slf4j</groupId>
+    <artifactId>slf4j-log4j12</artifactId>
+    <version>1.7.25</version>
+    <scope>test</scope>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api -->
+<dependency>
+    <groupId>org.apache.logging.log4j</groupId>
+    <artifactId>log4j-api</artifactId>
+    <version>2.13.3</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
+<dependency>
+    <groupId>org.apache.logging.log4j</groupId>
+    <artifactId>log4j-core</artifactId>
+    <version>2.13.3</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+<dependency>
+    <groupId>commons-io</groupId>
+    <artifactId>commons-io</artifactId>
+    <version>2.8.0</version>
+</dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.11</version>
+      <scope>test</scope>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-core -->
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-core</artifactId>
+    <version>6.9.1</version>
+</dependency>
+    <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-junit</artifactId>
+    <version>6.9.1</version>
+    <scope>test</scope>
+</dependency>
+    <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-jvm-deps -->
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-jvm-deps</artifactId>
+    <version>1.0.6</version>
+    <scope>provided</scope>
+</dependency>
+    <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-java</artifactId>
+    <version>6.9.1</version>
+</dependency>
+    <!-- https://mvnrepository.com/artifact/io.cucumber/gherkin -->
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>gherkin</artifactId>
+    <version>5.1.0</version>
+</dependency>
+    <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-html -->
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-html</artifactId>
+    <version>0.2.7</version>
+</dependency>
+    <!-- https://mvnrepository.com/artifact/net.masterthought/cucumber-reporting -->
+<dependency>
+    <groupId>net.masterthought</groupId>
+    <artifactId>cucumber-reporting</artifactId>
+    <version>4.11.2</version>
+</dependency>
+    <!-- https://mvnrepository.com/artifact/org.hamcrest/hamcrest-all -->
+<dependency>
+    <groupId>org.hamcrest</groupId>
+    <artifactId>hamcrest-all</artifactId>
+    <version>1.3</version>
+    <scope>test</scope>
+</dependency>
+    <!-- https://mvnrepository.com/artifact/net.sourceforge.cobertura/cobertura -->
+<dependency>
+    <groupId>net.sourceforge.cobertura</groupId>
+    <artifactId>cobertura</artifactId>
+    <version>1.9.4.1</version>
+    <scope>test</scope>
+</dependency>
+    <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+<dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-java</artifactId>
+    <version>3.141.59</version>
+</dependency>
+    <!-- tools.jar import -->
+  <dependency>
+  <groupId>com.sun</groupId>
+  <artifactId>tools</artifactId>
+  <version>1.7</version>
+  <scope>system</scope>
+  <systemPath>C:\Program Files\Java\jdk1.8.0_301\lib\tools.jar</systemPath>
+  </dependency>  
+  </dependencies>
+
+  <build>
+     <resources>
+  <resource>
+  <directory>src/test/java/utilities</directory>
+  <filtering>true</filtering>
+  </resource>
+  </resources>
+  
+    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+      <plugins>
+        <!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
+        <plugin>
+          <artifactId>maven-clean-plugin</artifactId>
+          <version>3.1.0</version>
+        </plugin>
+        <!-- default lifecycle, jar packaging: see https://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_jar_packaging -->
+        <plugin>
+          <artifactId>maven-resources-plugin</artifactId>
+          <version>3.0.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>3.8.0</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>2.22.1</version>
+        </plugin>
+        <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.0.0-M5</version>
+        <configuration>
+          <suiteXmlFiles>
+            <suiteXmlFile>testng.xml</suiteXmlFile>
+          </suiteXmlFiles>
+        </configuration>
+      </plugin>
+        <plugin>
+          <artifactId>maven-jar-plugin</artifactId>
+          <version>3.0.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-install-plugin</artifactId>
+          <version>2.5.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-deploy-plugin</artifactId>
+          <version>2.8.2</version>
+        </plugin>
+        <!-- site lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#site_Lifecycle -->
+        <plugin>
+          <artifactId>maven-site-plugin</artifactId>
+          <version>3.7.1</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-project-info-reports-plugin</artifactId>
+          <version>3.0.0</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+</project>
+
+LOG4J2.xml File:
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="warn">
+    <Properties>
+        <Property name="basePath">./logs</Property>
+    </Properties>
+ 
+    <Appenders>
+        <RollingFile name="File" fileName="${basePath}/prints.log" filePattern="${basePath}/prints-%d{yyyy-MM-dd}.log">
+            <PatternLayout>
+                <pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n</pattern>
+            </PatternLayout>
+            <Policies>
+                <SizeBasedTriggeringPolicy size="20 MB"/>
+            </Policies>
+        </RollingFile>
+ 
+        <Console name="console" target="SYSTEM_OUT">
+            <PatternLayout   pattern="[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n" />
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Root level="trace">
+            <appender-ref ref="File" />
+        </Root>
+    </Loggers>
+</Configuration>
+
+UTILITIES:
+DriverHelper Class:
+package utilities;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
+import java.util.concurrent.TimeUnit;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class driverHelper {
+
+	public static WebDriver driver;
+	public Properties prop= new Properties();
+	public WebDriver initializeDriver() throws IOException {
+		FileInputStream fis= new FileInputStream("C:\\Users\\Sheerin Mukherjee\\eclipse-mindtree\\projectCucumber_v001\\src\\test\\java\\utilities\\config.properties");
+	    prop.load(fis);
+	    String browserName= prop.getProperty("browser");
+	    if(browserName.equalsIgnoreCase("Chrome"))
+	    {
+	    	System.setProperty("webdriver.chrome.driver","C:\\Users\\Sheerin Mukherjee\\Desktop\\Selenium Drivers\\chromedriver\\chromedriver.exe" );
+			driver= new ChromeDriver();
+	    }
+	    else
+	    {
+	    	System.setProperty("webdriver.gecko.driver","C:\\Users\\Sheerin Mukherjee\\Desktop\\Selenium Drivers\\gecko driver\\geckodriver.exe" );
+			driver= new FirefoxDriver();
+	    }
+		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+		driver.manage().deleteAllCookies();
+		return driver;
+	}
+	
+	public void getScreenshot(String failedName) throws IOException
+	{
+	    TakesScreenshot ts=((TakesScreenshot)driver);
+		File src=ts.getScreenshotAs(OutputType.FILE);
+		File trg= new File(".\\screenshots\\"+ failedName+".png");
+		FileUtils.copyFile(src, trg);
+	}
+}
+
+
+
+
+
+
+Config.properties:
+Browser=chrome
+Listeners.java:
+package utilities;
+
+import java.io.IOException;
+
+import org.testng.ITestContext;
+import org.testng.ITestListener;
+import org.testng.ITestResult;
+
+import utilities.driverHelper;
+
+public class listeners implements ITestListener{
+
+	driverHelper wb= new driverHelper();
+	
+	
+
+	public void onTestFailure(ITestResult result) {
+		try {
+			wb.getScreenshot(result.getName());
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+
+
+
+	public void onTestStart(ITestResult result) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+	public void onTestSuccess(ITestResult result) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+	public void onTestSkipped(ITestResult result) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+	public void onStart(ITestContext context) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+	public void onFinish(ITestContext context) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
+
+	
+
+}
+
+Page-Objects:
+LoginPage.java:
+package pageObjects;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+public class loginPage {
+
+    public WebDriver driver;
+    
+    By hoverTo= By.linkText("Shop Products");
+    By powder= By.xpath("//header/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[3]/a[1]/span[1]");
+    By productTitle= By.xpath("//body[1]/div[1]/div[1]/main[1]/div[1]/div[1]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/a[1]/p[1]");
+	public loginPage(WebDriver driver) {
+		this.driver= driver;
+		
+	}
+	
+	public WebElement mouseClick() {
+		return driver.findElement(hoverTo);
+	}
+	
+	public WebElement selectPowder() {
+		return driver.findElement(powder);
+	}
+	
+	public WebElement prodTitle() {
+		return driver.findElement(productTitle);
+	}
+}
+
+TitleCheck.java:
+package pageObjects;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+public class titleCheck {
+	public WebDriver driver;
+	
+	By search= By.xpath("//header/div[2]/div[1]/div[1]/div[1]/form[1]/div[1]/input[1]");
+	
+	public titleCheck(WebDriver driver) {
+		this.driver=driver;
+	}
+	
+	public WebElement sendKey() {
+		return driver.findElement(search);
+	}
+
+}
+
+StepDefinitions file:
+package stepDefinitions;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.junit.runner.RunWith;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.testng.annotations.Test;
+
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import io.cucumber.junit.Cucumber;
+import junit.framework.Assert;
+import pageObjects.loginPage;
+import pageObjects.titleCheck;
+import utilities.driverHelper;
+
+	@RunWith(Cucumber.class)
+	public class Steps extends driverHelper{
+        public WebDriver driver;
+        public loginPage lp;
+        public titleCheck t;
+        public static Logger log=LogManager.getLogger(driverHelper.class.getName());
+		 @Given("^User launch chrome browser$")
+		    public void user_launch_chrome_browser() throws Throwable {
+		      lp= new loginPage(driver);
+		      log.info("The browser is successfully launched");
+		    }
+
+		    @When("^ User opens URL {String}")
+		    public void user_opens_url_something(String url) throws Throwable {
+		    	driver.get(url);
+		    	log.info("The URL has been loaded");;
+		        
+		    }
+
+
+		    @And("^  Hovers on Shop Products$")
+		    public void hovers_on_shop_products() throws Throwable {
+		    	Actions a= new Actions(driver);
+		        a.moveToElement(lp.mouseClick());
+		        log.info("Hovering over the shop products button");
+		    }
+
+		    @And ("^  Choose powder option from drop-down$")
+		    public void choose_powder_option_from_dropdown() throws Throwable {
+		        lp.selectPowder().click();
+		        log.info("powder option selected from dropdown");
+		    }
+		    
+			@Then("^ Verify if title {String} is displayed or not.$")
+		    public void verify_if_title_something_is_displayed_or_not(String title) throws Throwable {
+		        Assert.assertEquals(title, lp.prodTitle().getText());
+		        log.info("Title of the product is verified");
+		    }
+			
+			 @Given("^User launches chrome browser$")
+			    public void user_launches_chrome_browser() throws Throwable {
+			        titleCheck t= new titleCheck(driver);
+			        log.info("The browser is successfully launched");
+			    }
+
+			    @When("^ User opens URL {String}")
+			    public void user_opens_url(String url) throws Throwable {
+			        driver.get(url);
+			        log.info("The URL opens desired website");
+			    }
+			    
+			    @And("^  Types {String} in search bar$")
+			    public void types_antibacterial_in_search_bar(String text) throws Throwable {
+			       t.sendKey().sendKeys(text);
+			    }
+
+			    @Then("^ Verify if title {String} is displayed or not.$")
+			    public void verify_if_title_something_is_displayed(String strArg1) throws Throwable {
+			        Assert.assertEquals("Anti-Bacterial", driver.findElement(By.linkText("Anti-Bacterial")).getText()));
+			    }
+
+			  
+		}
+
+TestRunnerFile:
+package runner;
+
+import org.junit.runner.RunWith;
+
+import io.cucumber.junit.Cucumber;
+import io.cucumber.junit.CucumberOptions;
+
+@RunWith(Cucumber.class)
+@CucumberOptions(
+		features="src\\test\\java\\features",
+		monochrome=true,
+		glue="stepDefinitions")
+public class testRunner {
+
+}
+
+File Structure:
+ 
+
+
